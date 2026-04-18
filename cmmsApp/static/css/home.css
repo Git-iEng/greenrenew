@@ -1026,3 +1026,40 @@ a {
   transform: translateX(0);
   transition: transform .7s cubic-bezier(.2,.6,.2,1), opacity .7s;
 }
+
+.rmu-generators-card {
+  overflow: hidden;
+}
+
+.rmu-generators-media {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  display: block;
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
+}
+
+.rmu-generators-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.rmu-generators-media {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+}
+
+.rmu-generators-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
