@@ -891,3 +891,28 @@ This section is important for the desktop view, as it overrides the mobile style
     aspect-ratio: 16 / 9;
   }
 }
+/* ===== FINAL FIX: fixed header offset for all sections ===== */
+:root{
+  --header-offset: var(--header-height);
+}
+
+@media screen and (min-width: 1118px){
+  :root{
+    --header-offset: calc(var(--header-height) + 2rem);
+  }
+}
+
+/* Keep page content below fixed navbar */
+body{
+  padding-top: var(--header-offset);
+}
+
+/* Make anchor-linked sections stop below fixed navbar */
+section[id]{
+  scroll-margin-top: calc(var(--header-offset) + 12px);
+}
+
+/* Prevent double spacing on hero if body padding is used */
+.bo-hero{
+  padding-top: 24px !important;
+}
