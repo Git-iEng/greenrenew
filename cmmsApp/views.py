@@ -1094,7 +1094,7 @@ def request_demo_view(request):
 
     # Build email
     ts = timezone.now().strftime("%Y-%m-%d %H:%M:%S %Z")
-    subject = "New Enquirey for Junction Box from green renewable energy"
+    subject = "New Enquirey for green renewable energy"
     text_body = (
         "A new CARL demo request was submitted.\n\n"
         f"Submitted: {ts}\n"
@@ -1109,7 +1109,7 @@ def request_demo_view(request):
         f"{message or '(none)'}\n"
     )
     html_body = f"""
-        <h2 style="margin:0 0 8px">New Enquirey for Junction Box from green renewable energy</h2>
+        <h2 style="margin:0 0 8px">New Enquirey for  green renewable energy</h2>
         <p style="margin:0 0 12px;color:#334">Submitted {ts} from {request.META.get('REMOTE_ADDR','')}</p>
         <table cellpadding="6" cellspacing="0" style="border-collapse:collapse;background:#f9fbfc">
           <tr><td><b>Full name</b></td><td>{full_name}</td></tr>
@@ -1199,10 +1199,10 @@ def contact_section(request):
         # )
 
         # Email body
-        subject = "New green renewable energy contact submission for Junction Box"
+        subject = "New green renewable energy contact submission "
         text_body = "\n".join(
             [
-                "New contact submission for Junction Box:",
+                "New contact submission for green renewable energy:",
                 f"Name: {cd['first_name']} {cd.get('last_name','')}".strip(),
                 f"Company: {cd.get('company','')}",
                 f"Email: {cd['email']}",
